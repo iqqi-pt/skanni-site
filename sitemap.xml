@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://iqqi-pt.github.io/skanni-site/privacy/</loc>
+    <lastmod>2026-11-12T17:34:37.102Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://iqqi-pt.github.io/skanni-site/terms/</loc>
     <lastmod>2026-11-12T17:33:44.165Z</lastmod>
     <changefreq>weekly</changefreq>
