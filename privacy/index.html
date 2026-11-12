@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="en"><head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/skanni-site/privacy/">
+<!-- BASE:END -->
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#121826"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- SEO Meta Tags -->
+<title>Privacy Policy · Skanni by iQQi</title>
+<meta name="description" content="How Skanni handles merchant accounts, loyalty programme data, privacy rights and contact requests." />
+<meta property="og:title" content="Privacy Policy · Skanni by iQQi" />
+<meta property="og:description" content="How Skanni handles merchant accounts, loyalty programme data, privacy rights and contact requests." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Privacy Policy · Skanni by iQQi" />
+<meta name="twitter:description" content="How Skanni handles merchant accounts, loyalty programme data, privacy rights and contact requests." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mwdg9yzx-xd32s";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=9157');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='EQqLKa';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='EQqLKa';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head><body><a class="skip" href="#main">Skip to content</a><header><div class="wrap topbar"><a class="brand" href="https://paymegpt.com/p/FHqfKLFWV4" aria-label="Skanni home"><svg class="skanni-official-logo" role="img" aria-label="skanni" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 124" width="464" height="124"><g transform="translate(0 0) scale(1.24)"><rect x="4" y="4" width="92" height="92" rx="26" fill="#121826"/><circle cx="34" cy="34" r="12" fill="#FF5A36"/><circle cx="66" cy="34" r="12" fill="#FF5A36"/><circle cx="34" cy="66" r="12" fill="#FF5A36"/><circle cx="66" cy="66" r="10.5" fill="none" stroke="#FF5A36" stroke-width="3" stroke-dasharray="4 3.5"/></g><path transform="translate(147.20 99.60)" d="M28.1 1.7000000000000002Q16.400000000000002 1.7000000000000002 9.8 -3.1Q3.2 -7.9 2.8000000000000003 -16.6H17.0Q17.400000000000002 -14.0 20.150000000000002 -11.95Q22.900000000000002 -9.9 28.400000000000002 -9.9Q32.6 -9.9 35.35 -11.350000000000001Q38.1 -12.8 38.1 -15.5Q38.1 -17.900000000000002 36.0 -19.35Q33.9 -20.8 28.5 -21.400000000000002L24.200000000000003 -21.8Q14.3 -22.8 9.350000000000001 -27.3Q4.4 -31.8 4.4 -38.800000000000004Q4.4 -44.6 7.300000000000001 -48.5Q10.200000000000001 -52.400000000000006 15.350000000000001 -54.400000000000006Q20.5 -56.400000000000006 27.1 -56.400000000000006Q37.7 -56.400000000000006 44.2 -51.75Q50.7 -47.1 51.0 -38.300000000000004H36.800000000000004Q36.4 -41.0 34.0 -42.85Q31.6 -44.7 26.900000000000002 -44.7Q23.200000000000003 -44.7 21.0 -43.300000000000004Q18.8 -41.900000000000006 18.8 -39.5Q18.8 -37.2 20.700000000000003 -36.0Q22.6 -34.800000000000004 26.900000000000002 -34.300000000000004L31.200000000000003 -33.9Q41.300000000000004 -32.800000000000004 46.900000000000006 -28.300000000000004Q52.5 -23.8 52.5 -16.2Q52.5 -10.700000000000001 49.5 -6.65Q46.5 -2.6 41.0 -0.44999999999999996Q35.5 1.7000000000000002 28.1 1.7000000000000002Z M97.5 0.0 80.2 -25.6H74.9V0.0H58.900000000000006V-73.0H74.9V-28.700000000000003L94.80000000000001 -54.800000000000004H111.6L93.6 -31.400000000000002L115.5 0.0Z M151.9 0.0V-10.5Q151.2 -8.4 150.3 -6.7Q148.0 -2.8000000000000003 144.05 -0.7000000000000001Q140.1 1.4000000000000001 134.4 1.4000000000000001Q128.5 1.4000000000000001 124.05 -0.7000000000000001Q119.6 -2.8000000000000003 117.1 -6.750000000000001Q114.6 -10.700000000000001 114.6 -16.2Q114.6 -22.200000000000003 117.69999999999999 -26.050000000000004Q120.8 -29.900000000000002 126.4 -31.75Q132.0 -33.6 139.3 -33.6H149.2V-33.800000000000004Q149.2 -38.0 147.2 -40.1Q145.2 -42.2 140.8 -42.2Q138.6 -42.2 135.0 -42.1Q131.4 -42.0 127.6 -41.8Q123.8 -41.6 120.7 -41.400000000000006V-54.900000000000006Q123.0 -55.1 126.1 -55.3Q129.2 -55.5 132.5 -55.6Q135.8 -55.7 138.7 -55.7Q147.1 -55.7 152.85 -53.300000000000004Q158.6 -50.900000000000006 161.6 -46.050000000000004Q164.6 -41.2 164.6 -33.6V0.0ZM149.2 -24.700000000000003H139.2Q135.0 -24.700000000000003 132.75 -22.650000000000002Q130.5 -20.6 130.5 -17.1Q130.5 -13.8 132.75 -11.75Q135.0 -9.700000000000001 139.2 -9.700000000000001Q141.9 -9.700000000000001 144.05 -10.650000000000002Q146.2 -11.600000000000001 147.6 -13.9Q149.0 -16.2 149.2 -20.3Z M174.20000000000002 0.0V-54.800000000000004H186.9V-41.0Q187.4 -43.300000000000004 188.20000000000002 -45.300000000000004Q190.3 -50.900000000000006 194.70000000000002 -53.7Q199.10000000000002 -56.5 205.4 -56.5H206.10000000000002Q215.70000000000002 -56.5 220.75 -50.25Q225.8 -44.0 225.8 -31.3V0.0H209.8V-32.2Q209.8 -36.6 207.20000000000002 -39.400000000000006Q204.60000000000002 -42.2 200.20000000000002 -42.2Q195.70000000000002 -42.2 192.95000000000002 -39.35Q190.20000000000002 -36.5 190.20000000000002 -31.900000000000002V0.0Z M235.40000000000003 0.0V-54.800000000000004H248.10000000000002V-41.0Q248.60000000000002 -43.300000000000004 249.40000000000003 -45.300000000000004Q251.50000000000003 -50.900000000000006 255.90000000000003 -53.7Q260.3 -56.5 266.6 -56.5H267.3Q276.90000000000003 -56.5 281.95000000000005 -50.25Q287.0 -44.0 287.0 -31.3V0.0H271.0V-32.2Q271.0 -36.6 268.4 -39.400000000000006Q265.8 -42.2 261.40000000000003 -42.2Q256.90000000000003 -42.2 254.15000000000003 -39.35Q251.40000000000003 -36.5 251.40000000000003 -31.900000000000002V0.0Z M299.2 0.0V-43.0H291.90000000000003V-54.800000000000004H315.2V0.0ZM305.40000000000003 -60.2Q300.90000000000003 -60.2 298.75 -62.550000000000004Q296.6 -64.9 296.6 -68.5Q296.6 -72.2 298.75 -74.55000000000001Q300.90000000000003 -76.9 305.40000000000003 -76.9Q309.90000000000003 -76.9 312.05 -74.55000000000001Q314.2 -72.2 314.2 -68.5Q314.2 -64.9 312.05 -62.550000000000004Q309.90000000000003 -60.2 305.40000000000003 -60.2Z" fill="#121826"/></svg></a><a class="back" href="https://paymegpt.com/p/FHqfKLFWV4">← Back to Skanni</a></div></header><main id="main" class="wrap"><div class="intro"><div class="eyebrow">Skanni by iQQi / Legal</div><h1>Privacy Policy</h1><p class="lead">How personal data is used across Skanni, who is responsible, and how to exercise your rights.</p><p class="date">Last updated: <time datetime="2026-11-12">12 November 2026</time> · Version 1.0</p></div><div class="layout"><nav class="toc" aria-label="On this page"><p>ON THIS PAGE</p><ol><li><a href="#controller">Who is responsible</a></li><li><a href="#data">Data involved</a></li><li><a href="#purposes">Why data is used</a></li><li><a href="#recipients">Who receives data</a></li><li><a href="#transfers">International processing</a></li><li><a href="#retention">How long data is kept</a></li><li><a href="#storage">Browser storage, cookies and camera</a></li><li><a href="#rights">Your rights and choices</a></li><li><a href="#security">Security and younger users</a></li><li><a href="#updates">Updates and related information</a></li></ol></nav><article aria-label="Privacy Policy"><section class="legal-section" id="controller"><h2>1. Who is responsible</h2><p>Skanni is developed by <a href="https://iqqi.pt">iQQi</a>, a brand of <strong>Generic Stuff, Lda.</strong> We are the controller for personal data used to administer merchant accounts, handle enquiries and manage our own service relationship.</p><div class="identity"><strong>Generic Stuff, Lda.</strong><br>NIF: 513 277 978<br>Estrada da Branqueta, 25<br>4930-682 Valença, Portugal<br>Privacy and product contact: <a href="mailto:hello@skanni.app">hello@skanni.app</a></div><p>For a merchant’s customer loyalty programme, the merchant normally determines the purposes of processing and is the controller. We process programme data on its behalf where we act as its processor. The merchant’s own privacy notice explains its use of your data; ask the business shown on your card about its programme.</p></section>
+<section class="legal-section" id="data"><h2>2. Data involved</h2><ul><li><strong>Merchant accounts:</strong> login email, authentication data, business name, account identifiers, and business or contact details you provide.</li><li><strong>Programme settings:</strong> logo, colours, reward settings and customer support email. Information placed on a card or enrolment page is intended to be visible to customers.</li><li><strong>Loyalty participation:</strong> details requested in the enrolment form, pass identifiers, stamp balances, reward activity, card status and any recorded consent choices. The actual fields depend on the programme.</li><li><strong>Support:</strong> messages, contact details and information supplied to resolve a request.</li><li><strong>Technical use:</strong> IP address, browser or device information, request times, session identifiers and operational or security logs processed by the services that deliver Skanni.</li></ul><p>The current public landing page does not collect payments. If paid checkout is enabled, its notice must identify the payment provider and the billing data involved before payment details are submitted.</p></section>
+<section class="legal-section" id="purposes"><h2>3. Why data is used</h2><div class="table-wrap"><table><thead><tr><th>Purpose</th><th>Legal basis for our controller activities</th></tr></thead><tbody><tr><td>Set up an account, answer a requested enquiry and provide the service</td><td>Contract or steps you request before a contract. For staff acting for a business, our legitimate interest in managing that business relationship.</td></tr><tr><td>Protect accounts, diagnose faults and prevent misuse</td><td>Legitimate interests in maintaining a secure, reliable service, balanced against individuals’ rights.</td></tr><tr><td>Meet accounting, tax or other legal requirements</td><td>Legal obligation, where applicable.</td></tr><tr><td>Optional promotional messages or non-essential tracking</td><td>Consent where required. Participation in a loyalty programme is not, by itself, permission for unrelated marketing.</td></tr></tbody></table></div><p>For customer programme data processed on behalf of a merchant, that merchant determines and explains the relevant legal basis. Required account fields are needed to provide access; without them we may be unable to create or maintain the account. Optional consent can be refused or withdrawn.</p></section>
+<section class="legal-section" id="recipients"><h2>4. Who receives data</h2><p>Data is made available as needed to authorised personnel and service providers supporting hosting, databases, authentication, wallet passes and support. The current setup uses Cloudflare infrastructure and PayMeGPT for page hosting and wallet-pass services. Apple and Google handle use of their wallet products under their own applicable terms and privacy notices.</p><p>A merchant can access data for its own loyalty programme. Information deliberately published on a pass, including the merchant’s support email, is visible to its holders. Authorities or professional advisers may receive information when required by law or necessary to establish or defend legal rights.</p><p>The pages also request fonts from Google Fonts and, where used, styles from cdnjs; those requests expose technical connection information to the asset providers. Contact us for details about the providers relevant to your use.</p></section>
+<section class="legal-section" id="transfers"><h2>5. International processing</h2><p>Some technology providers operate internationally, so processing may involve locations outside the European Economic Area. An overseas transfer requires a valid GDPR transfer mechanism, such as an applicable adequacy decision or appropriate safeguards, including standard contractual clauses where relevant.</p><p>For information about the locations and safeguards applicable to your data, or to request a copy of relevant safeguards, contact <a href="mailto:hello@skanni.app">hello@skanni.app</a>. This notice does not represent that all data is stored exclusively in Portugal or the EU.</p></section>
+<section class="legal-section" id="retention"><h2>6. How long data is kept</h2><p>Retention depends on why the data is needed. Account and programme records are needed while the account or programme is in use; support information while an enquiry is being handled and for relevant follow-up; security records for investigating and preventing incidents. Legal obligations and the need to establish or defend claims can require some records to be kept longer.</p><p>For customer data held on a merchant’s behalf, retention and deletion follow the merchant’s lawful instructions and the applicable processing agreement. Ask us about account closure or erasure. This notice does not imply that an automatic deletion tool is currently available.</p><p>Removing a pass from your phone does not, by itself, delete the merchant’s programme records. Clearing browser storage removes local data, not the corresponding server account.</p></section>
+<section class="legal-section" id="storage"><h2>7. Browser storage, cookies and camera</h2><p>The merchant dashboard uses session storage for its login session and local storage for language preferences and local drafts or settings. You can clear these using your browser settings, although doing so may sign you out or remove unsynchronised drafts.</p><p>The hosting services may also use technical cookies or logs to deliver and protect pages. Any non-essential analytics or advertising technologies requiring consent must be disclosed and offered with a valid choice before activation; this notice is not consent to tracking.</p><p>The card scanner requests camera access when you start it. You can deny or revoke that permission in your browser. The scanner uses the camera to read a code; the code or pass identifier is then used to perform the requested programme operation.</p></section>
+<section class="legal-section" id="rights"><h2>8. Your rights and choices</h2><p>Depending on the circumstances, you may request access, correction, erasure, restriction or portability, and object to processing based on legitimate interests. You may withdraw consent without affecting earlier lawful processing. You can object to direct marketing at any time.</p><p>Write to <a href="mailto:hello@skanni.app">hello@skanni.app</a>. We may need proportionate information to verify your identity. Requests normally receive a response within one month; if a lawful extension is necessary, we will explain it within that month.</p><p>For a merchant’s loyalty records, contact that merchant first. If you contact us, we can help identify the appropriate controller and assist with requests within our role.</p><p>You may complain to <a href="https://www.cnpd.pt/cidadaos/participacoes/">Portugal’s Comissão Nacional de Proteção de Dados (CNPD)</a> or another competent supervisory authority.</p></section>
+<section class="legal-section" id="security"><h2>9. Security and younger users</h2><p>Account authentication and merchant-specific access are used to restrict access to programme data. No online system can guarantee absolute security. Protect your credentials, use a trusted device and report suspected misuse promptly.</p><p>Merchant accounts are intended for adults authorised to represent a business. Merchants must consider age-related requirements for their own programmes. Please avoid entering children’s data or sensitive information that the service does not need.</p><p>The current stamp and reward functions do not use automated decision-making intended to produce legal or similarly significant effects on individuals.</p></section>
+<section class="legal-section" id="updates"><h2>10. Updates and related information</h2><p>This notice covers Skanni’s current website and merchant service. It will need updating when processing changes, including when payments, optional marketing or additional providers are introduced. Material changes will be communicated where required.</p><p>See also the <a href="https://paymegpt.com/p/hpMrvM3j6j">Terms &amp; Conditions</a>. The merchant’s customer-facing privacy notice and any required data-processing agreement remain separate documents.</p></section></article></div></main><footer class="skanni-footer" id="skanni-footer"><div class="skanni-footer-inner"><div><div class="skanni-footer-credit">Skanni by <a href="https://iqqi.pt" aria-label="iQQi — brand website">iQQi</a></div><p class="skanni-footer-meta">A product developed by iQQi · Generic Stuff, Lda.<br>© 2026 Generic Stuff, Lda. All rights reserved.</p></div><nav class="skanni-footer-nav" aria-label="Legal and contact"><a href="https://paymegpt.com/p/hpMrvM3j6j">Terms &amp; Conditions</a><a href="https://paymegpt.com/p/EQqLKa">Privacy Policy</a><a href="mailto:hello@skanni.app">Contact</a></nav></div></footer></body></html>
