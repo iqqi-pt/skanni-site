@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iqqi-pt.github.io/skanni-site/sitemap.xml
